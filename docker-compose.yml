@@ -1,0 +1,9 @@
+services:
+  bookland:
+    image: ${DOCKER_REGISTRY-}bookland
+    build:
+      context: .
+      dockerfile: bookland/Dockerfile
+    ports:
+    - "5000:5000"
+    - "5001:5001"

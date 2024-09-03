@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\bookland\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|solutionrelative:bookland\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D9C41B05-E4B2-4486-87B7-3B518D04C84E}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\bookland\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|solutionrelative:bookland\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|c:\\users\\georg\\onedrive\\documentos\\projetos\\bookland\\bookland\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9D386B18-56A6-478E-AFAA-18AF75C60CE7}|bookland\\bookland.csproj|solutionrelative:bookland\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "docker-compose.override.yml",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.override.yml",
+              "RelativeDocumentMoniker": "docker-compose.override.yml",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.override.yml",
+              "RelativeToolTip": "docker-compose.override.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-09-02T23:25:08.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-09-02T23:23:06.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\Dockerfile",
+              "RelativeDocumentMoniker": "bookland\\Dockerfile",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\Dockerfile",
+              "RelativeToolTip": "bookland\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-02T23:22:34.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-02T23:22:19.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\appsettings.json",
+              "RelativeDocumentMoniker": "bookland\\appsettings.json",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\appsettings.json",
+              "RelativeToolTip": "bookland\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-02T23:21:07.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\Program.cs",
+              "RelativeDocumentMoniker": "bookland\\Program.cs",
+              "ToolTip": "C:\\Users\\georg\\OneDrive\\Documentos\\Projetos\\bookland\\bookland\\Program.cs",
+              "RelativeToolTip": "bookland\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T23:20:57.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
