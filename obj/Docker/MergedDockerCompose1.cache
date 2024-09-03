@@ -1,8 +1,8 @@
-name: dockercompose7427889141254184887
+name: dockercompose8113475169613785177
 services:
   bookland:
     build:
-      context: C:\Users\georg\OneDrive\Documentos\Projetos\bookland
+      context: C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api
       dockerfile: bookland/Dockerfile
       args:
         BUILD_CONFIGURATION: Debug
@@ -20,8 +20,8 @@ services:
       - --wait
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTP_PORTS: "8080"
-      ASPNETCORE_HTTPS_PORTS: "8081"
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
@@ -35,10 +35,12 @@ services:
       default: null
     ports:
       - mode: ingress
-        target: 8080
+        target: 5000
+        published: "5000"
         protocol: tcp
       - mode: ingress
-        target: 8081
+        target: 5001
+        published: "5001"
         protocol: tcp
     tty: true
     volumes:
@@ -55,12 +57,12 @@ services:
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\georg\OneDrive\Documentos\Projetos\bookland\bookland
+        source: C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api\bookland
         target: /app
         bind:
           create_host_path: true
       - type: bind
-        source: C:\Users\georg\OneDrive\Documentos\Projetos\bookland
+        source: C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api
         target: /src
         bind:
           create_host_path: true
@@ -105,6 +107,26 @@ services:
         read_only: true
         bind:
           create_host_path: true
+  database:
+    container_name: database
+    environment:
+      POSTGRES_DB: livros
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api\.containers\livros-db
+        target: /var/lib/postgresql/data
+        bind:
+          create_host_path: true
 networks:
   default:
-    name: dockercompose7427889141254184887_default
+    name: dockercompose8113475169613785177_default

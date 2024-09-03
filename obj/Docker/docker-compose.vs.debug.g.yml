@@ -1,7 +1,7 @@
 services:
   bookland:
     image: bookland:dev
-    container_name: "bookland_1"
+    container_name: "bookland"
     build:
       args:
         LAUNCHING_FROM_VS: true
@@ -15,8 +15,8 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=/.nuget/fallbackpackages
     volumes:
-      - C:\Users\georg\OneDrive\Documentos\Projetos\bookland\bookland:/app:rw
-      - C:\Users\georg\OneDrive\Documentos\Projetos\bookland:/src:rw
+      - C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api\bookland:/app:rw
+      - C:\Users\georg\OneDrive\Documentos\Projetos\bookland-web-api:/src:rw
       - C:\Users\georg\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\georg\.nuget\packages:/.nuget/packages:ro
       - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/.nuget/fallbackpackages:ro
