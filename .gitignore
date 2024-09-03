@@ -41,3 +41,54 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+
+
+# Ignorar diretório .vs (Visual Studio)
+.vs/
+
+# Ignorar arquivos de cache e binários
+*.suo
+*.vscode
+*.cache
+*.bin
+*.obj
+*.dll
+*.exe
+*.pdb
+*.log
+*.user
+*.aps
+*.ncb
+*.sdf
+*.opendb
+*.pyc
+*.class
+
+# Ignorar arquivos de build do Visual Studio
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+
+# Ignorar arquivos temporários do Visual Studio
+_ReSharper*/
+*_ReSharper.Caches
+*.vs/
+*.idea/
+.vscode/
+
+# Ignorar diretórios de saída do build
+bin/
+obj/
+
+# Ignorar cache do Docker
+Docker/CachedComposeConfigFilePaths.cache
+
+# Ignorar arquivos do layout do projeto
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# Ignorar outros arquivos e diretórios indesejados
+FileContentIndex/
