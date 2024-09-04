@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: book-land-backend:v1 # A imagem que você construiu e carregou
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DB_CONNECTION_STRING
+              value: "Host=postgresql;Port=5432;Database=mydatabase;Username=myuser;Password=mypassword;"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  ports:
+    - port: 5000
+  selector:
+    app: backend

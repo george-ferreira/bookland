@@ -7,24 +7,37 @@ WORKDIR /app
 EXPOSE 5000
 EXPOSE 5001
 
+#
+## Esta fase é usada para compilar o projeto de serviço
+#FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+#ARG BUILD_CONFIGURATION=Release
+#WORKDIR /src
+#COPY ["bookland/bookland.csproj", "bookland/"]
+#RUN dotnet restore "./bookland/bookland.csproj"
+#COPY . .
+#WORKDIR "/src/bookland"
+#RUN dotnet build "./bookland.csproj" -c $BUILD_CONFIGURATION -o /app/build
+#
+## Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
+#FROM build AS publish
+#ARG BUILD_CONFIGURATION=Release
+#RUN dotnet publish "./bookland.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+#
+## Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
+#FROM base AS final
+#WORKDIR /app
+#COPY --from=publish /app/publish .
+#ENTRYPOINT ["dotnet", "bookland.dll"]
 
-# Esta fase é usada para compilar o projeto de serviço
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["bookland/bookland.csproj", "bookland/"]
-RUN dotnet restore "./bookland/bookland.csproj"
-COPY . .
-WORKDIR "/src/bookland"
-RUN dotnet build "./bookland.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-# Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./bookland.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-# Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY . .
+RUN dotnet restore
+RUN dotnet build -c Release -o /app/build
+RUN dotnet publish -c Release -o /app/publish
+
+# Use a imagem base do .NET Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "bookland.dll"]

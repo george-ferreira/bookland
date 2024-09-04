@@ -10,6 +10,11 @@
     <DockerServiceName>bookland</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="bd.yml" />
+    <None Include="docker-compose - Copy.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="booklandbackend.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
