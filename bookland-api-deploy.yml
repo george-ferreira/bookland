@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookland-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookland-api
+    spec:
+      containers:
+      - name: bookland-api
+        image: georgeferreirati/bookland-api:v1.0
+  selector:
+    matchLabels:
+      app: bookland-api
