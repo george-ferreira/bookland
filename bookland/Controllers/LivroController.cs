@@ -38,8 +38,8 @@ namespace bookland.Controllers
                                 Titulo = livro.Titulo, 
                                 Imagem = livro.Imagem, 
                                 Paginas = livro.Paginas, 
-                                DataInicio = livro.DataInicio, 
-                                DataFim = livro.DataFim };
+                                DataInicio = livro.DataInicio.UtcDateTime, 
+                                DataFim = livro.DataFim.UtcDateTime };
 
             _context.Livros.Add(l);
             _context.SaveChanges();
