@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookland-api
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookland-api
+    spec:
+      containers:
+      - name: bookland-api
+        image: georgeferreirati/bookland-api:v2.0
+  selector:
+    matchLabels:
+      app: bookland-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookland-api
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30001  # This port will be exposed on each Node
+  selector:
+    app: bookland-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookland-api
+spec:
+  type: LoadBalancer
+  externalIPs:
+  - 192.168.0.50
+  ports:
+    - port: 8080       # Port exposed by the LoadBalancer
+      targetPort: 8080 # Port on the container
+  selector:
+    app: bookland-api      # Labels to select the pods
