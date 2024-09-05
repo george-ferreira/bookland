@@ -15,13 +15,6 @@ namespace bookland.Controllers
         }
 
         [HttpGet]
-        public IActionResult TestConection()
-        {
-            var conexao = _context.Database.CanConnect();
-            return Ok(conexao);
-        }
-
-        [HttpGet]
         public IActionResult GetAllLivros()
         {
             var livros = _context.Livros.ToList();

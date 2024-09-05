@@ -8,7 +8,7 @@ import { Book } from '../models/book.model';
   providedIn: 'root'
 })
 export class BookService {
-  private URL = 'https://localhost:7135/Livro';
+  private URL = 'http://localhost:8888/Livro';
 
   constructor(private http: HttpClient) {}
 
