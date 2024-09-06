@@ -43,9 +43,7 @@ x86/
 [Oo]ut/
 
 # Ignorar diretórios bin e obj em projetos específicos
-bin/
 obj/
-bookland/bin/
 bookland/obj/
 
 # Arquivos de log do MSBuild
